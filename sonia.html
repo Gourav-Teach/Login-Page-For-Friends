@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonia's World 🌸✈️</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #2b1022, #0d060c);
+      color: #fff;
+      padding: 24px 14px 60px 14px;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    header h1 {
+      font-size: 26px;
+      background: linear-gradient(135deg, #D69DE6, #A5D1E4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      color: #cbd5e1;
+      font-size: 13px;
+    }
+
+    /* Search Box */
+    .search-box {
+      max-width: 850px;
+      margin: 0 auto 24px auto;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(244, 114, 182, 0.25);
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-box input:focus {
+      border-color: #EBA9CC;
+    }
+
+    /* Section Headings */
+    .section-title {
+      font-size: 19px;
+      color: #f8fafc;
+      margin: 28px auto 14px auto;
+      max-width: 850px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 8px;
+    }
+
+    /* Responsive Grid */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    /* Common Card Styling */
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(244, 114, 182, 0.15);
+      border-radius: 15px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      backdrop-filter: blur(10px);
+      transition: transform 0.2s ease;
+    }
+
+    .card:active {
+      transform: scale(0.98);
+    }
+
+    /* Specific Style for About Cards */
+    .about-card-box {
+      background: rgba(244, 114, 182, 0.07);
+      border: 1px solid rgba(244, 114, 182, 0.28);
+    }
+
+    .about-card-title {
+      font-size: 15.5px;
+      font-weight: 600;
+      color: #889DF2;
+      margin-bottom: 8px;
+    }
+
+    .about-card-desc {
+      font-size: 13px;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .card-subtitle {
+      font-size: 12px;
+      color: #94a3b8;
+      margin-bottom: 14px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 12.5px;
+      font-weight: 600;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .btn-youtube {
+      background: linear-gradient(135deg, #D0AFD5, #ACF88A);
+      color: #FFFFFF;
+    }
+
+    .btn-travel {
+      background: linear-gradient(135deg, #7ACEF3, #0284c7);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Sonia's Corner 🌸✨</h1>
+    <p>Music Lover • World Explorer • Kdrama Enthusiast</p>
+  </header>
+
+  <!-- Live Search Bar -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔍 Search vibes, places, or dramas..." onkeyup="filterCards()">
+  </div>
+
+  <!-- 3 About Cards Section -->
+  <h2 class="section-title">About Sonia 🌸✨</h2>
+  <div class="grid-container" id="aboutGrid">
+
+    <!-- About Card 1 -->
+    <div class="card about-card-box">
+      <div>
+        <div class="about-card-title">Meet Sonia ✈️🌍</div>
+        <div class="about-card-desc">
+          "A soul born to wander and explore the globe. When she isn't busy binge-watching her favorite Asian dramas or lost in good music, she’s dreaming of distant horizons—from the bustling streets of New York to scenic landscapes abroad. A truly amazing friend who belongs to the world!"
+        </div>
+      </div>
+    </div>
+
+    <!-- About Card 2 -->
+    <div class="card about-card-box">
+      <div>
+        <div class="about-card-title">Passport to Dreams: Sonia 🗽🎧</div>
+        <div class="about-card-desc">
+          "Chief Drama Critic, music lover, and a future global traveler. India is just the starting point—her dreams are set on boarding international flights and exploring America and beyond. This page is dedicated to her favorite vibes and big adventures ahead!"
+        </div>
+      </div>
+    </div>
+
+    <!-- About Card 3 -->
+    <div class="card about-card-box">
+      <div>
+        <div class="about-card-title">Meet Sonia 🎧💖</div>
+        <div class="about-card-desc">
+          "A heart full of warmth, an ear for good tunes, and eyes that love beautiful stories on screen. Just a small corner dedicated to the best person!"
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 14 K-Dramas & Asian Dramas Section -->
+  <h2 class="section-title">Favorite Dramas Binge List 🎬🍿</h2>
+  <div class="grid-container" id="dramasGrid">
+
+    <!-- 1. Love 020 -->
+    <div class="card">
+      <div>
+        <div class="card-title">1. Love 020 🎮🌸</div>
+        <div class="card-subtitle">Gaming Romance • College Love Story • Classic</div>
+      </div>
+      <a class="btn btn-youtube" href="https://www.youtube.com/results?search_query=Love+020+drama+clips" target="_blank">
+        ▶ Watch on YouTube
+      </a>
+    </div>
+
+    <!-- 2. Crash Landing on You -->
+    <div class="card">
+      <div>
+        <div class="card-title">2. Crash Landing on You 🪂❤️</div>
+        <div class="card-subtitle">Epic Romance • Secret Paragliding • Emotional Masterpiece</div>
+      </div>
+      <a class="btn btn-youtube" href="https://www.youtube.com/results?search_query=Crash+Landing+on+You+kdrama+clips" target="_blank">
+        ▶ Watch on YouTube
+      </a>
+    </div>
+
+    <!-- 3. Goblin (Guardian: The Lonely and Great God) -->
+    <div class="card">
+      <div>
+        <div class="card-title">3. Goblin 🗡️✨</div>
+        <div class="card-subtitle">Fantasy Romance • Iconic OST • Timeless Legend</div>
+      </div>
+      <a class="btn btn-youtube" href="https://www.youtube.com/results?search_query=Goblin+kdrama+clips" target="_blank">
+        ▶ Watch on YouTube
+      </a>
+    </div>
+
+    <!-- 4. Descendants of the Sun -->
+    <div class="card">
+      <div>
+        <div class="card-title">4. Descendants of the Sun 🎖️🩺</div>
+        <div class="card-subtitle">Special Forces • Medical Drama • High Action Love</div>
+      </div>
+      <a class="btn btn-youtube" href="https://www.youtube.com/results?search_query=Descendants+of+the+Sun+kdrama+clips" target="_blank">
+        ▶ Watch on YouTube
+      </a>
+    </div>
+
+    <!-- 5. Business Proposal -->
+    <div class="card">
+      <div>
+        <div class="card-title">5. Business Proposal 💼🐔</div>
+        <div class="card-subtitle">CEO Blind Date • Pure Comedy • Sweet Romance</div>
+      </div>
+      <a class="btn btn-youtube" href="https://www.youtube.com/results?search_query=Business+Proposal+kdrama+clips" target="_blank">
+        ▶ Watch on YouTube
+      </a>
+    </div>
+
+    <!-- 6. True Beauty -->
+    <div class="card">
+      <div>
+        <div class="card-title">6. True Beauty 💄✨</div>
+        <div class="card-subtitle">High School Glow Up • Love Triangle • Hilarious & Cute</div>
+      </div>
+      <a class="btn btn-youtube" href="https://www.youtube.com/results?search_query=True+Beauty+kdrama+clips" target="_blank">
+        ▶ Watch on YouTube
+      </a>
+    </div>
+
+    <!-- 7. Weightlifting Fairy Kim Bok-joo -->
+    <div class="card">
+      <div>
+        <div class="card-title">7. Weightlifting Fairy Kim Bok-joo 🏋️‍♀️🍕</div>
+        <div class="card-subtitle">Sports Romance • Swag Vibes • Heartwarming Friendship</div>
+      </div>
+      <a class="btn btn-youtube" href="https://www.youtube.com/results?search_query=Weightlifting+Fairy+Kim+Bok+joo+clips" target="_blank">
+        ▶ Watch on YouTube
+      </a>
+    </div>
+
+    <!-- 8. Strong Girl Bong-soon -->
+    <div class="card">
+      <div>
+        <div class="card-title">8. Strong Girl Bong-soon 💥🦸‍♀️</div>
+        <div class="card-subtitle">Superpower Comedy • Charming Bodyguard • Thriller & Love</div>
+      </div>
+      <a class="btn btn-youtube" href="https://www.youtube.com/results?search_query=Strong+Woman+Do+Bong+Soon+clips" target="_blank">
+        ▶ Watch on YouTube
+      </a>
+    </div>
+
+    <!-- 9. What's Wrong with Secretary Kim -->
+    <div class="card">
+      <div>
+        <div class="card-title">9. What's Wrong with Secretary Kim 👔🎀</div>
+        <div class="card-subtitle">Narcissistic Boss • Perfect Chemistry • Romantic Comedy</div>
+      </div>
+      <a class="btn btn-youtube" href="https://www.youtube.com/results?search_query=Whats+Wrong+with+Secretary+Kim+clips" target="_blank">
+        ▶ Watch on YouTube
+      </a>
+    </div>
+
+    <!-- 10. Twenty-Five Twenty-One -->
+    <div class="card">
+      <div>
+        <div class="card-title">10. Twenty-Five Twenty-One 🤺📼</div>
+        <div class="card-subtitle">Youth & Fencing • 90s Nostalgia • Pure Inspiration</div>
+      </div>
+      <a class="btn btn-youtube" href="https://www.youtube.com/results?search_query=Twenty+Five+Twenty+One+clips" target="_blank">
+        ▶ Watch on YouTube
+      </a>
+    </div>
+
+    <!-- 11. Hometown Cha-Cha-Cha -->
+    <div class="card">
+      <div>
+        <div class="card-title">11. Hometown Cha-Cha-Cha 🌊🏄‍♂️</div>
+        <div class="card-subtitle">Seaside Village • Healing Drama • Heartwarming Vibes</div>
+      </div>
+      <a class="btn btn-youtube" href="https://www.youtube.com/results?search_query=Hometown+Cha+Cha+Cha+clips" target="_blank">
+        ▶ Watch on YouTube
+      </a>
+    </div>
+
+    <!-- 12. Hotel Del Luna -->
+    <div class="card">
+      <div>
+        <div class="card-title">12. Hotel Del Luna 🌕👻</div>
+        <div class="card-subtitle">Supernatural Mystery • Stunning Fashion • Deep Emotion</div>
+      </div>
+      <a class="btn btn-youtube" href="https://www.youtube.com/results?search_query=Hotel+Del+Luna+clips" target="_blank">
+        ▶ Watch on YouTube
+      </a>
+    </div>
+
+    <!-- 13. King the Land -->
+    <div class="card">
+      <div>
+        <div class="card-title">13. King the Land 🏨✈️</div>
+        <div class="card-subtitle">Luxury Hotel Heir • Bright Smiles • Feel-Good Romance</div>
+      </div>
+      <a class="btn btn-youtube" href="https://www.youtube.com/results?search_query=King+the+Land+kdrama+clips" target="_blank">
+        ▶ Watch on YouTube
+      </a>
+    </div>
+
+    <!-- 14. Hidden Love -->
+    <div class="card">
+      <div>
+        <div class="card-title">14. Hidden Love 🍬📖</div>
+        <div class="card-subtitle">Sweetest Romance • Secret Crush • Pure Wholesome Vibe</div>
+      </div>
+      <a class="btn btn-youtube" href="https://www.youtube.com/results?search_query=Hidden+Love+drama+clips" target="_blank">
+        ▶ Watch on YouTube
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Travel Bucket List Section -->
+  <h2 class="section-title">Dream Travel Bucket List ✈️🗺️</h2>
+  <div class="grid-container" id="travelGrid">
+
+    <div class="card">
+      <div>
+        <div class="card-title">New York City, USA 🗽🇺🇸</div>
+        <div class="card-subtitle">Times Square • Broadway • Skyline Views</div>
+      </div>
+    <a class="btn btn-travel" href="https://www.youtube.com/results?search_query=New+York+City+Travel+Vlog" target="_blank">
+       🚀 Explore City Vibe
+      </a>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="card-title">Los Angeles, USA 🌴🇺🇸</div>
+        <div class="card-subtitle">Santa Monica Pier • Hollywood • Universal Studios</div>
+      </div>
+      <a class="btn btn-travel" href="https://www.youtube.com/results?search_query=Los+Angeles+Travel+Vlog" target="_blank">
+        🚀 Explore City Vibe
+      </a>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="card-title">Seoul, South Korea 🇰🇷🥢</div>
+        <div class="card-subtitle">Hongdae Street • K-Food • Han River Sunset</div>
+      </div>
+      <a class="btn btn-travel" href="https://www.youtube.com/results?search_query=Seoul+South+Korea+Travel+Vlog" target="_blank">
+        🚀 Explore City Vibe
+      </a>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="card-title">Interlaken, Switzerland 🏔️🇨🇭</div>
+        <div class="card-subtitle">Alpine Paragliding • Lake Brienz • Snowy Peaks</div>
+      </div>
+      <a class="btn btn-travel" href="https://www.youtube.com/results?search_query=Interlaken+Switzerland+Travel+Vlog" target="_blank">
+        🚀 Explore City Vibe
+      </a>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="card-title">Honolulu, Hawaii 🌺🏖️</div>
+        <div class="card-subtitle">Waikiki Surfing • Volcano Hikes • Sunset Cruise</div>
+      </div>
+      <a class="btn btn-travel" href="https://www.youtube.com/results?search_query=Hawaii+Travel+Vlog" target="_blank">
+        🚀 Explore City Vibe
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+    // Live Search Filter for All Cards
+    function filterCards() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.card');
+
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

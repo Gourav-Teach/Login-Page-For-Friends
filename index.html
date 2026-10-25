@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Dear FRIENDS PORTALL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>MY BEST FRIENDS IN THE WORLD🌎</h1>
+  <p>Please enter your credentials 📝</p>
+  
+  <ol>
+    <li>[MY DEAR Friend CHIRAG 💌]</li>
+    <li>[MY DEAR Friend SONIA🎀]</li>
+    <li>[Admin🤫]</li>
+  </ol>
+
+  <form id="loginForm" onsubmit="handleLogin(event)">
+    <label for="category">Category 🧠</label>
+    <input list="category-list" id="category" name="category" placeholder="Select or type category" required>
+    
+    <!-- Only 3 categories -->
+    <datalist id="category-list">
+      <option value="CHIRAG">
+      <option value="SONIA">
+      <option value="GOURAV{Admin}">
+    </datalist>
+  
+    <label for="username">Username 👤</label>
+    <input type="text" id="username" name="username" placeholder="Enter username" required>
+  
+    <label for="password">Password 🔑</label>
+    <div class="password-wrapper">
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+      <span class="toggle-icon" onclick="togglePassword()">👁️</span>
+    </div>
+  
+    <button type="submit" id="loginBtn">Log In</button>
+  </form>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

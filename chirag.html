@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chirag's Musical Stage 🎙️</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1e1333, #0a0612);
+      color: #fff;
+      padding: 24px 14px 60px 14px;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    header h1 {
+      font-size: 26px;
+      background: linear-gradient(135deg, #c084fc, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      color: #a8a29e;
+      font-size: 13px;
+    }
+
+    /* Instagram Profile Link */
+    .profile-banner {
+      max-width: 850px;
+      margin: 0 auto 24px auto;
+      text-align: center;
+    }
+
+    .btn-instagram-profile {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-size: 13.5px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(221, 42, 123, 0.3);
+      transition: opacity 0.2s ease;
+    }
+
+    .btn-instagram-profile:hover {
+      opacity: 0.9;
+    }
+
+    /* Search Box */
+    .search-box {
+      max-width: 850px;
+      margin: 0 auto 24px auto;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(192, 132, 252, 0.2);
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-box input:focus {
+      border-color: #c084fc;
+    }
+
+    /* Section Title */
+    .section-title {
+      font-size: 19px;
+      color: #f8fafc;
+      margin: 28px auto 14px auto;
+      max-width: 850px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 8px;
+    }
+
+    /* Grid Layout */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    /* Cards */
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(192, 132, 252, 0.15);
+      border-radius: 15px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      backdrop-filter: blur(10px);
+      transition: transform 0.2s ease;
+    }
+
+    .card:active {
+      transform: scale(0.98);
+    }
+
+    .about-card-box {
+      background: rgba(192, 132, 252, 0.06);
+      border: 1px solid rgba(192, 132, 252, 0.25);
+    }
+
+    .card-title {
+      font-size: 15.5px;
+      font-weight: 600;
+      color: #c084fc;
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .card-subtitle {
+      font-size: 12px;
+      color: #94a3b8;
+      margin-bottom: 14px;
+    }
+
+    /* Reel Button */
+    .btn-reel {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 12.5px;
+      font-weight: 600;
+      background: linear-gradient(135deg, #f09433, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      transition: opacity 0.2s ease;
+    }
+
+    .btn-reel:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Chirag's Musical Stage 🎙️🎸</h1>
+    <p>Official Voice • Melodic Vibes • Acoustic Sessions</p>
+  </header>
+
+  <!-- Instagram Profile Button -->
+  <div class="profile-banner">
+    <a class="btn-instagram-profile" href="https://www.instagram.com/chiragmehamiyaofficial" target="_blank">
+      📸 Visit @chiragmehamiyaofficial on Instagram
+    </a>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔍 Search vibes, reels, or songs..." onkeyup="filterCards()">
+  </div>
+
+  <!-- 3 About Cards Section -->
+  <h2 class="section-title">About The Artist 🎶</h2>
+  <div class="grid-container" id="aboutGrid">
+
+    <!-- About Card 1 -->
+    <div class="card about-card-box">
+      <div>
+        <div class="card-title">The Soulful Voice 🎙️✨</div>
+        <div class="card-desc">
+          Born with a passion for rhythm and melody. For Chirag, singing isn't just a hobby—it's pure emotion and self-expression. From heartfelt acoustic covers to powerful vocal performances, his voice breathes life into every lyric.
+        </div>
+      </div>
+    </div>
+
+    <!-- About Card 2 -->
+    <div class="card about-card-box">
+      <div>
+        <div class="card-title">The Rising Artist 🎸🌟</div>
+        <div class="card-desc">
+          Crafting melodies, touching souls, and living for the stage. Driven by his love for music and singing, Chirag brings raw vocals and infectious energy to every track. An artist turning melodies into unforgettable experiences.
+        </div>
+      </div>
+    </div>
+
+    <!-- About Card 3 -->
+    <div class="card about-card-box">
+      <div>
+        <div class="card-title">Rhythm & Soul 🎵🎤</div>
+        <div class="card-desc">
+          Music in his soul, rhythm in his veins. Singing every note straight from the heart. Welcome to his musical corner—where pure vocal talent meets genuine acoustic passion and timeless memories.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Reels Grid Section -->
+  <h2 class="section-title">Singing Reels & Performances 🎵✨</h2>
+  <div class="grid-container" id="reelsGrid">
+
+    <!-- Reel 1 -->
+    <div class="card">
+      <div>
+        <div class="card-title" style="color: #fff;">Live Singing & Acoustic Session 🎙️✨</div>
+        <div class="card-subtitle">Vocal Performance • Instagram Reel • Chirag Live</div>
+      </div>
+      <a class="btn-reel" href="https://www.instagram.com/reel/DdksMgBAeCy/" target="_blank">
+        ▶ Watch Reel on Instagram
+      </a>
+    </div>
+
+    <!-- Reel 2 -->
+    <div class="card">
+      <div>
+        <div class="card-title" style="color: #fff;">Melodic Vibe & Vocals 🎶✨</div>
+        <div class="card-subtitle">Singing Reel • Pure Melodies • Chirag Live</div>
+      </div>
+      <a class="btn-reel" href="https://www.instagram.com/reel/DeUhsGVAabH/" target="_blank">
+        ▶ Watch Reel on Instagram
+      </a>
+    </div>
+
+    <!-- Reel 3 -->
+    <div class="card">
+      <div>
+        <div class="card-title" style="color: #fff;">Soulful Performance & Harmony 🎙️🎵</div>
+        <div class="card-subtitle">Heartfelt Cover • Vocal Expression • Instagram Reel</div>
+      </div>
+      <a class="btn-reel" href="https://www.instagram.com/reel/DdRS53SxmJj/" target="_blank">
+        ▶ Watch Reel on Instagram
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+    // Live Search Filter for Cards
+    function filterCards() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.card');
+
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
